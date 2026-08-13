@@ -1,17 +1,28 @@
 {
-	"name": "@justfiles/app-notes",
+	"name": "app-notes",
 	"version": "0.1.0",
 	"private": true,
+	"packageManager": "pnpm@11.2.2",
+	"description": "A freeform knowledge base shared with the agent.",
 	"type": "module",
-	"main": "./dist/manifest.json",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/justfiles/app-notes.git"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"format": "biome format --write .",
+		"lint": "biome ci .",
+		"lint:fix": "biome check --write ."
 	},
 	"dependencies": {
-		"@justfiles/app": "workspace:*",
+		"@justfiles/app": "^0.4.2",
 		"@pierre/trees": "1.0.0-beta.4",
 		"fflate": "^0.8.3",
 		"valibot": "^1.1.0"
@@ -21,13 +32,14 @@
 		"react-dom": "^19"
 	},
 	"devDependencies": {
-		"@justfiles/tsconfig": "workspace:*",
+		"@biomejs/biome": "^2.5.8",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"@vitejs/plugin-react": "^5",
 		"react": "^19",
 		"react-dom": "^19",
-		"typescript": "catalog:",
-		"vite": "^8.0.0-beta.13"
+		"typescript": "6.0.3",
+		"vite": "^8.0.12",
+		"vitest": "^4.1.6"
 	}
 }
