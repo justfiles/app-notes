@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
 	// Reacts in one bundle means the renderer sets the hook dispatcher on an instance
 	// the components never read, and the GUI dies on its first `useState`.
 	resolve: { dedupe: ['react', 'react-dom'] },
+	optimizeDeps: { entries: ['src/gui.tsx'] },
 	plugins: [
 		react(),
 		...(mode === 'test'
