@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
 						id: 'justfiles.notes',
 						name: 'Notes',
 						description: 'A freeform knowledge base shared with the agent',
-						icon: 'icon.png',
+						icon: 'icon.svg',
 						include: ['*.css'],
 						app: 'src/app.ts',
 						gui: 'src/gui.tsx'
